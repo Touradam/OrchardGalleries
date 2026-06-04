@@ -191,16 +191,18 @@ The website is compatible with:
 
 ## Image Assets
 
-The website uses local placeholder images from the `/photos` directory. 
+The website uses a combination of:
+- **Hero image**: Stored locally in `/images/hero-main.jpg` (your custom image)
+- **Other images**: Unsplash placeholder URLs for exhibitions, artists, and events
 
 ### Adding Your Images
 
-1. Place your gallery images in the `/photos` folder
-2. Follow the naming convention specified in `/photos/IMAGE_GUIDE.md`
+1. Place your gallery images in the `/images` folder
+2. Update the image paths in HTML files to point to your local images
 3. Recommended formats: JPG or WebP
 4. Optimize images for web before uploading
 
-The HTML files are already configured to use local images with descriptive filenames. See `/photos/IMAGE_GUIDE.md` for a complete list of required images and specifications.
+The hero image is the only custom local image. All other images use Unsplash placeholders and should be replaced with your actual gallery photos.
 
 ## Customization
 
