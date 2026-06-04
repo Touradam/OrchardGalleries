@@ -8,12 +8,14 @@
    CSS VARIABLES & DESIGN TOKENS
    ============================================ */
 :root {
-  /* Color Palette */
+  /* Color Palette - Elegant & Sophisticated */
   --color-white: #FFFFFF;
-  --color-off-white: #F7F7F5;
-  --color-charcoal: #1C1C1C;
-  --color-warm-gray: #8A8A8A;
-  --color-deep-olive: #6D7B5D;
+  --color-off-white: #FAF9F6;
+  --color-charcoal: #2C2C2C;
+  --color-warm-gray: #9B9B9B;
+  --color-deep-olive: #8B7355;
+  --color-accent-light: #C4A98B;
+  --color-accent-dark: #6B5D52;
   
   /* Typography */
   --font-serif: 'Playfair Display', 'Georgia', serif;
@@ -109,7 +111,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-deep-olive);
+  color: var(--color-accent-dark);
 }
 
 /* ============================================
@@ -168,7 +170,7 @@ a:hover {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-deep-olive);
+  background-color: var(--color-accent-dark);
   transition: width var(--transition-fast);
 }
 
@@ -311,14 +313,15 @@ a:hover {
 }
 
 .btn-primary {
-  background-color: var(--color-deep-olive);
-  border-color: var(--color-deep-olive);
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
   color: var(--color-white);
 }
 
 .btn-primary:hover {
-  background-color: transparent;
-  color: var(--color-deep-olive);
+  background-color: var(--color-deep-olive);
+  border-color: var(--color-deep-olive);
+  color: var(--color-white);
 }
 
 .btn-light {
@@ -466,7 +469,7 @@ a:hover {
 
 .featured-label {
   font-size: 0.875rem;
-  color: var(--color-deep-olive);
+  color: var(--color-accent-dark);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--spacing-sm);
@@ -494,10 +497,11 @@ a:hover {
 
 .artist-image {
   width: 100%;
-  height: 300px;
-  border-radius: 50%;
+  height: 350px;
   overflow: hidden;
   margin-bottom: var(--spacing-sm);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .artist-image img {
@@ -564,7 +568,7 @@ a:hover {
 
 .event-date {
   font-size: 0.875rem;
-  color: var(--color-deep-olive);
+  color: var(--color-accent-dark);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -580,7 +584,7 @@ a:hover {
    NEWSLETTER SIGNUP
    ============================================ */
 .newsletter {
-  background-color: var(--color-deep-olive);
+  background: linear-gradient(135deg, var(--color-accent-dark) 0%, var(--color-deep-olive) 100%);
   color: var(--color-white);
   text-align: center;
 }
@@ -613,7 +617,7 @@ a:hover {
 .newsletter-form button {
   padding: 1rem 2rem;
   background-color: var(--color-white);
-  color: var(--color-deep-olive);
+  color: var(--color-accent-dark);
   border: 2px solid var(--color-white);
   font-weight: 600;
   text-transform: uppercase;
@@ -623,7 +627,8 @@ a:hover {
 }
 
 .newsletter-form button:hover {
-  background-color: transparent;
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent-light);
   color: var(--color-white);
 }
 
@@ -661,7 +666,7 @@ a:hover {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-deep-olive);
+  border-color: var(--color-accent-dark);
 }
 
 .form-group textarea {
@@ -966,7 +971,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-deep-olive);
+  outline: 2px solid var(--color-accent-dark);
   outline-offset: 2px;
 }
 
