@@ -260,11 +260,19 @@ a:hover {
 }
 
 .hero-content h1 {
-  color: var(--color-orange-gold);
+  color: var(--color-white);
   margin-bottom: var(--spacing-md);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   position: relative;
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.6),
+    0 0 60px rgba(255, 255, 255, 0.4),
+    0 0 80px rgba(255, 255, 255, 0.2),
+    2px 2px 4px rgba(0, 0, 0, 0.1);
+  filter: blur(0.3px);
+  opacity: 0.95;
 }
 
 
