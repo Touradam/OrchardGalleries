@@ -281,8 +281,9 @@ a:hover {
   font-family: var(--font-serif);
   font-style: italic;
   margin-bottom: var(--spacing-lg);
-  color: var(--color-gold-light);
+  color: var(--color-white);
   line-height: 1.5;
+  opacity: 0.9;
 }
 
 .hero-cta {
@@ -337,8 +338,8 @@ a:hover {
 
 .btn-light:hover {
   background-color: transparent;
-  border-color: var(--color-charcoal);
-  color: var(--color-charcoal);
+  border-color: var(--color-orange-gold);
+  color: var(--color-orange-gold);
   box-shadow: 
     0 0 25px rgba(232, 159, 60, 0.7),
     0 0 40px rgba(232, 159, 60, 0.5);
