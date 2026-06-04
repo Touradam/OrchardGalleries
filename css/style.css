@@ -16,8 +16,9 @@
   --color-deep-olive: #8B7355;
   --color-accent-light: #C4A98B;
   --color-accent-dark: #6B5D52;
-  --color-gold: #D4AF37;
+  --color-gold: #E89F3C;
   --color-gold-light: #F4E4B0;
+  --color-orange-gold: #E89F3C;
   
   /* Typography */
   --font-serif: 'Playfair Display', 'Georgia', serif;
@@ -258,14 +259,34 @@ a:hover {
 }
 
 .hero-content h1 {
-  color: var(--color-gold);
+  color: var(--color-orange-gold);
   margin-bottom: var(--spacing-md);
-  text-shadow: 
-    0 0 20px rgba(212, 175, 55, 0.6),
-    0 0 40px rgba(212, 175, 55, 0.4),
-    2px 2px 8px rgba(0, 0, 0, 0.7);
   font-weight: 500;
   letter-spacing: 0.02em;
+  position: relative;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 6px 16px rgba(232, 159, 60, 0.25);
+  filter: drop-shadow(0 -2px 8px rgba(232, 159, 60, 0.2));
+}
+
+.hero-content h1::before {
+  content: 'Orchard Galleries';
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  color: var(--color-orange-gold);
+  transform: scaleY(-0.5) translateY(10px);
+  transform-origin: top;
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(232, 159, 60, 0.4) 0%, transparent 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(1px);
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .hero-tagline {
@@ -275,8 +296,8 @@ a:hover {
   margin-bottom: var(--spacing-lg);
   color: var(--color-gold-light);
   text-shadow: 
-    0 0 15px rgba(212, 175, 55, 0.5),
-    0 0 30px rgba(212, 175, 55, 0.3),
+    0 0 15px rgba(232, 159, 60, 0.5),
+    0 0 30px rgba(232, 159, 60, 0.3),
     1px 1px 6px rgba(0, 0, 0, 0.6);
   line-height: 1.5;
 }
@@ -324,16 +345,16 @@ a:hover {
 }
 
 .btn-light {
-  border-color: var(--color-gold);
-  color: var(--color-gold);
-  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  border-color: var(--color-orange-gold);
+  color: var(--color-orange-gold);
+  box-shadow: 0 0 15px rgba(232, 159, 60, 0.3);
 }
 
 .btn-light:hover {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
+  background-color: var(--color-orange-gold);
+  border-color: var(--color-orange-gold);
   color: var(--color-charcoal);
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 25px rgba(232, 159, 60, 0.6);
 }
 
 /* ============================================
