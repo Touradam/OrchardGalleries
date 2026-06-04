@@ -191,12 +191,16 @@ The website is compatible with:
 
 ## Image Assets
 
-The website currently uses placeholder images from Unsplash. For production:
+The website uses local placeholder images from the `/photos` directory. 
 
-1. Replace placeholder images with actual gallery photography
-2. Optimize images for web (recommended: WebP format)
-3. Add images to the `/images` directory
-4. Update image paths in HTML files
+### Adding Your Images
+
+1. Place your gallery images in the `/photos` folder
+2. Follow the naming convention specified in `/photos/IMAGE_GUIDE.md`
+3. Recommended formats: JPG or WebP
+4. Optimize images for web before uploading
+
+The HTML files are already configured to use local images with descriptive filenames. See `/photos/IMAGE_GUIDE.md` for a complete list of required images and specifications.
 
 ## Customization
 
@@ -259,7 +263,7 @@ Email: info@orchardgalleries.com
 
 - **Design & Development**: Contemporary gallery website template
 - **Fonts**: Google Fonts (Playfair Display, Inter)
-- **Images**: Unsplash (placeholder images)
+- **Images**: Local placeholder structure (awaiting gallery photos)
 
 ## License
 
