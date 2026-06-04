@@ -37,31 +37,10 @@ function initMobileMenu() {
 }
 
 // ============================================
-// HERO SLIDER
+// HERO SECTION (Static Image - No Slider)
 // ============================================
-function initHeroSlider() {
-  const slides = document.querySelectorAll('.hero-slide');
-  
-  if (slides.length > 0) {
-    let currentSlide = 0;
-    
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-    }
-    
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-    
-    // Show first slide
-    showSlide(0);
-    
-    // Auto-advance slides every 5 seconds
-    setInterval(nextSlide, 5000);
-  }
-}
+// Hero section now uses a single static image
+// No slider functionality needed
 
 // ============================================
 // STICKY NAVIGATION
@@ -280,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize all features
   initMobileMenu();
-  initHeroSlider();
   initStickyNavigation();
   initSmoothScrolling();
   initLightbox();
