@@ -246,7 +246,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+  background: transparent;
 }
 
 .hero-content {
@@ -265,7 +265,8 @@ a:hover {
   letter-spacing: 0.02em;
   position: relative;
   text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.6),
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    4px 4px 12px rgba(0, 0, 0, 0.6),
     0 6px 16px rgba(232, 159, 60, 0.25);
   filter: drop-shadow(0 -2px 8px rgba(232, 159, 60, 0.2));
 }
@@ -297,7 +298,8 @@ a:hover {
   text-shadow: 
     0 0 15px rgba(232, 159, 60, 0.5),
     0 0 30px rgba(232, 159, 60, 0.3),
-    1px 1px 6px rgba(0, 0, 0, 0.6);
+    2px 2px 8px rgba(0, 0, 0, 0.8),
+    3px 3px 10px rgba(0, 0, 0, 0.6);
   line-height: 1.5;
 }
 
@@ -346,19 +348,24 @@ a:hover {
 .btn-light {
   border-color: var(--color-orange-gold);
   color: var(--color-orange-gold);
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(232, 159, 60, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 
+    0 0 10px rgba(232, 159, 60, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all var(--transition-fast);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn-light:hover {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.3);
   border-color: var(--color-white);
   color: var(--color-white);
   box-shadow: 
-    0 0 25px rgba(232, 159, 60, 0.6),
-    0 0 40px rgba(232, 159, 60, 0.4),
+    0 0 25px rgba(232, 159, 60, 0.7),
+    0 0 40px rgba(232, 159, 60, 0.5),
+    0 4px 12px rgba(0, 0, 0, 0.5),
     inset 0 0 15px rgba(232, 159, 60, 0.1);
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* ============================================
