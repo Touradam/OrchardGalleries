@@ -277,9 +277,8 @@ a:hover {
   top: 100%;
   width: 100%;
   color: var(--color-orange-gold);
-  transform: scaleY(-0.5) translateY(10px);
+  transform: scaleY(-0.5);
   transform-origin: top;
-  opacity: 0;
   background: linear-gradient(to bottom, rgba(232, 159, 60, 0.4) 0%, transparent 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -347,14 +346,19 @@ a:hover {
 .btn-light {
   border-color: var(--color-orange-gold);
   color: var(--color-orange-gold);
-  box-shadow: 0 0 15px rgba(232, 159, 60, 0.3);
+  background-color: transparent;
+  box-shadow: 0 0 10px rgba(232, 159, 60, 0.2);
+  transition: all var(--transition-fast);
 }
 
 .btn-light:hover {
-  background-color: var(--color-orange-gold);
-  border-color: var(--color-orange-gold);
-  color: var(--color-charcoal);
-  box-shadow: 0 0 25px rgba(232, 159, 60, 0.6);
+  background-color: transparent;
+  border-color: var(--color-white);
+  color: var(--color-white);
+  box-shadow: 
+    0 0 25px rgba(232, 159, 60, 0.6),
+    0 0 40px rgba(232, 159, 60, 0.4),
+    inset 0 0 15px rgba(232, 159, 60, 0.1);
 }
 
 /* ============================================
