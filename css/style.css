@@ -16,6 +16,8 @@
   --color-deep-olive: #8B7355;
   --color-accent-light: #C4A98B;
   --color-accent-dark: #6B5D52;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F4E4B0;
   
   /* Typography */
   --font-serif: 'Playfair Display', 'Georgia', serif;
@@ -250,15 +252,18 @@ a:hover {
   position: relative;
   z-index: 10;
   text-align: center;
-  color: var(--color-white);
+  color: var(--color-gold);
   max-width: 900px;
   padding: var(--spacing-md);
 }
 
 .hero-content h1 {
-  color: var(--color-white);
+  color: var(--color-gold);
   margin-bottom: var(--spacing-md);
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 
+    0 0 20px rgba(212, 175, 55, 0.6),
+    0 0 40px rgba(212, 175, 55, 0.4),
+    2px 2px 8px rgba(0, 0, 0, 0.7);
   font-weight: 500;
   letter-spacing: 0.02em;
 }
@@ -268,8 +273,11 @@ a:hover {
   font-family: var(--font-serif);
   font-style: italic;
   margin-bottom: var(--spacing-lg);
-  opacity: 0.98;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  color: var(--color-gold-light);
+  text-shadow: 
+    0 0 15px rgba(212, 175, 55, 0.5),
+    0 0 30px rgba(212, 175, 55, 0.3),
+    1px 1px 6px rgba(0, 0, 0, 0.6);
   line-height: 1.5;
 }
 
@@ -316,13 +324,16 @@ a:hover {
 }
 
 .btn-light {
-  border-color: var(--color-white);
-  color: var(--color-white);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
 }
 
 .btn-light:hover {
-  background-color: var(--color-white);
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
   color: var(--color-charcoal);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
 }
 
 /* ============================================
