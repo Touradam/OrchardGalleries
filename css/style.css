@@ -224,6 +224,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   margin-top: 72px;
+  padding-bottom: 150px;
 }
 
 .hero-image {
@@ -320,16 +321,16 @@ a:hover {
 }
 
 .btn-light {
-  border-color: var(--color-orange-gold);
-  color: var(--color-orange-gold);
+  border-color: var(--color-white);
+  color: var(--color-white);
   background-color: transparent;
   transition: all var(--transition-fast);
 }
 
 .btn-light:hover {
   background-color: transparent;
-  border-color: var(--color-white);
-  color: var(--color-white);
+  border-color: var(--color-charcoal);
+  color: var(--color-charcoal);
   box-shadow: 
     0 0 25px rgba(232, 159, 60, 0.7),
     0 0 40px rgba(232, 159, 60, 0.5);
