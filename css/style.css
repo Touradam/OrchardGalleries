@@ -19,6 +19,7 @@
   --color-gold: #E89F3C;
   --color-gold-light: #F4E4B0;
   --color-orange-gold: #E89F3C;
+  --color-dark-chocolate: #3D2314;
   
   /* Typography */
   --font-serif: 'Playfair Display', 'Georgia', serif;
@@ -254,25 +255,27 @@ a:hover {
   position: relative;
   z-index: 10;
   text-align: center;
-  color: var(--color-gold);
+  color: rgba(64, 61, 59, 1);
+  line-height: 23.2px;
   max-width: 900px;
   padding: var(--spacing-md);
+  height: 558px;
 }
 
 .hero-content h1 {
-  color: var(--color-white);
+  color: rgba(67, 31, 10, 1);
+  margin-top: 128px;
   margin-bottom: var(--spacing-md);
   font-weight: 400;
   letter-spacing: 0.05em;
-  position: relative;
-  text-shadow: 
-    0 0 20px rgba(255, 255, 255, 0.8),
-    0 0 40px rgba(255, 255, 255, 0.6),
-    0 0 60px rgba(255, 255, 255, 0.4),
-    0 0 80px rgba(255, 255, 255, 0.2),
-    2px 2px 4px rgba(0, 0, 0, 0.1);
-  filter: blur(0.3px);
-  opacity: 0.95;
+  position: static;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  text-shadow:
+    0 0 12px rgba(232, 159, 60, 0.6),
+    0 1px 3px rgba(244, 228, 176, 0.8);
+  filter: none;
+  opacity: 1;
 }
 
 
@@ -280,17 +283,55 @@ a:hover {
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-family: var(--font-serif);
   font-style: italic;
-  margin-bottom: var(--spacing-lg);
-  color: var(--color-white);
+  position: absolute;
+  left: 11px;
+  top: 362px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--color-dark-chocolate);
   line-height: 1.5;
-  opacity: 0.9;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .hero-cta {
+  display: block;
+  margin-top: var(--spacing-lg);
+  height: fit-content;
+}
+
+.hero-cta .btn {
   display: flex;
-  gap: var(--spacing-sm);
+  flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
+  width: 232px;
+  height: 34px;
+  position: absolute;
+  padding: 0;
+  left: 93px;
+}
+
+.hero-cta .btn:first-child {
+  left: 87px;
+  top: 428px;
+  border-color: var(--color-dark-chocolate);
+  color: var(--color-dark-chocolate);
+}
+
+.hero-cta .btn:last-child {
+  top: 544px;
+}
+
+.hero-cta .btn:first-child:hover {
+  background-color: rgba(61, 35, 20, 0.08);
+  border-color: var(--color-dark-chocolate);
+  color: var(--color-dark-chocolate);
+  box-shadow: none;
+}
+
+.hero-cta .btn + .btn {
+  margin-top: 0;
 }
 
 /* ============================================
@@ -923,11 +964,6 @@ a:hover {
   
   .newsletter-form {
     flex-direction: column;
-  }
-  
-  .hero-cta {
-    flex-direction: column;
-    align-items: stretch;
   }
   
   .footer-content {

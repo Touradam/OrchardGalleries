@@ -84,15 +84,7 @@ class GalleryExperience {
       { src: 'images/artwork-3.jpg', title: 'Artwork' },
       { src: 'images/gallery-space.jpg', title: 'Gallery Space' },
       { src: 'images/gallery-interior-1.jpg', title: 'Gallery Interior' },
-      { src: 'images/gallery-interior-2.jpg', title: 'Gallery Interior' },
-      { src: 'images/gallery-exterior.jpg', title: 'Gallery Exterior' },
-      { src: 'images/gallery-facade.jpg', title: 'Gallery Facade' },
-      { src: 'images/team-director.jpg', title: 'Gallery Director' },
-      { src: 'images/team-curator.jpg', title: 'Curator' },
-      { src: 'images/team-education.jpg', title: 'Education Coordinator' },
-      { src: 'images/team-programs.jpg', title: 'Programs Manager' },
-      { src: 'images/community-engagement.jpg', title: 'Community Engagement' },
-      { src: 'images/oakland-location.jpg', title: 'Oakland Location' }
+      { src: 'images/gallery-showroom.jpg', title: 'Exhibition Showroom' }
     ];
 
     this.renderThumbnails();
