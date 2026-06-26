@@ -3,238 +3,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Orchard Galleries - A home for contemporary art and community in Oakland's Art Murmur District. Featuring rotating exhibitions, artist showcases, and cultural programming.">
-  <meta name="keywords" content="art gallery, Oakland, contemporary art, exhibitions, Bay Area artists, Art Murmur District">
-  <title>Orchard Galleries | Contemporary Art in Oakland</title>
-  
-  <!-- Fonts -->
+  <meta name="description" content="Orchard Galleries — The Dome Today group exhibition celebrating The Dome Center for the Arts. July 11 – Aug 29, Oakland.">
+  <title>Orchard Galleries | The Dome Today</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-  
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/gallery.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/orchard.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navigation">
-    <div class="nav-container">
-      <a href="index.html" class="logo">Orchard Galleries</a>
-      
-      <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
+  <nav class="site-nav">
+    <div class="container site-nav-inner">
+      <a href="index.html" class="site-logo">Orchard Galleries</a>
+      <button class="site-nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
       </button>
-      
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="exhibitions.html">Exhibitions</a></li>
-        <li><a href="artists.html">Artists</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="visit.html">Visit</a></li>
-        <li><a href="contact.html">Contact</a></li>
+      <ul class="site-nav-links">
+        <li><a href="index.html" class="is-active">Home</a></li>
+        <li><a href="details.html">Programme</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#visit">Visit</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-image">
-      <img src="images/hero-main.jpg" alt="Gallery interior with contemporary artworks on display">
-    </div>
-    <div class="hero-content">
-      <h1 data-text="Orchard Galleries">Orchard Galleries</h1>
-      <p class="hero-tagline">A Home for Contemporary Art and Community</p>
-      <div class="hero-cta">
-        <a href="exhibitions.html" class="btn btn-light">Current Exhibitions</a>
-        <a href="visit.html" class="btn btn-light">Visit Us</a>
+  <main>
+    <section class="landing-hero">
+      <div class="hero-bg">
+        <div class="hero-spotlight"></div>
+        <div class="hero-particles"></div>
       </div>
-    </div>
-    <div class="hero-overlay"></div>
-  </section>
 
-  <!-- Featured Exhibition Section -->
-  <section class="section">
-    <div class="container">
-      <div class="featured-exhibition">
-        <div class="featured-image">
-          <img src="images/exhibition-featured.jpg" alt="Featured exhibition artwork" data-lightbox>
+      <div class="container hero-layout reveal-stagger">
+        <div class="hero-showcase reveal-item">
+          <p class="hero-showcase-label eyebrow">Now Showing</p>
+          <div class="hero-flip-grid" id="hero-flip-grid" aria-label="Exhibition artwork cards"></div>
+          <p class="hero-showcase-hint">Click a card to view artwork and artist details</p>
         </div>
-        <div class="featured-content">
-          <span class="featured-label">Now Showing</span>
-          <h2>Reflections in Color</h2>
-          <p class="card-meta">March 15 - May 30, 2026</p>
-          <p>Experience the vibrant world of contemporary abstract expressionism through the works of pioneering Bay Area artist Adama Toure. This groundbreaking exhibition explores the intersection of color theory, emotion, and spatial relationships in modern art.</p>
-          <p>Featuring works by Adama Toure, "Reflections in Color" invites visitors to immerse themselves in bold palettes and dynamic compositions that challenge traditional perceptions of abstract art.</p>
-          <a href="exhibitions.html" class="btn btn-primary mt-medium">View Exhibition Details</a>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Upcoming Events Section -->
-  <section class="section section-light">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Upcoming Events</h2>
-        <p class="section-subtitle">Join us for artist talks, workshops, and community gatherings</p>
-      </div>
-      
-      <div class="card-grid">
-        <article class="card">
-          <div class="card-image">
-            <img src="images/event-opening.jpg" alt="Opening reception">
-          </div>
-          <div class="card-content">
-            <p class="card-meta">Saturday, June 7, 2026 • 6:00 PM</p>
-            <h3 class="card-title">Opening Reception: Summer Showcase</h3>
-            <p class="card-description">Celebrate the launch of our summer exhibition featuring emerging Bay Area artists. Light refreshments served.</p>
-            <a href="events.html" class="btn">RSVP Now</a>
-          </div>
-        </article>
+        <div class="hero-content reveal-item">
+          <p class="eyebrow">Group Exhibition</p>
+          <h1>The Dome Today</h1>
+          <p class="lead">The Orchard Galleries are pleased to present a group exhibition celebrating the legacy of The Dome Center for the Arts as well as the current artists have been part of its creative community.</p>
 
-        <article class="card">
-          <div class="card-image">
-            <img src="images/event-artist-talk.jpg" alt="Artist talk">
+          <div class="hero-stats">
+            <div>
+              <span class="hero-stat-label">On View</span>
+              <span class="hero-stat-value">July 11 – Aug 29</span>
+            </div>
+            <div>
+              <span class="hero-stat-label">Opening Reception</span>
+              <span class="hero-stat-value">July 11th · 1 – 5 pm</span>
+            </div>
+            <div>
+              <span class="hero-stat-label">Location</span>
+              <span class="hero-stat-value">489 25th St. Oakland</span>
+            </div>
           </div>
-          <div class="card-content">
-            <p class="card-meta">Thursday, June 12, 2026 • 7:00 PM</p>
-            <h3 class="card-title">Artist Talk with Adama Toure</h3>
-            <p class="card-description">Join acclaimed abstract artist Adama Toure for an intimate discussion about their creative process and inspiration.</p>
-            <a href="events.html" class="btn">Learn More</a>
+
+          <div class="countdown-wrap" id="countdown-wrap" hidden>
+            <span class="countdown-label">Opening in</span>
+            <div class="countdown-timer" id="countdown-timer"></div>
           </div>
-        </article>
 
-        <article class="card">
-          <div class="card-image">
-            <img src="images/event-workshop.jpg" alt="Workshop">
+          <div class="btn-group">
+            <a href="details.html" class="btn btn-primary">View Full Programme</a>
+            <a href="#cards" class="btn btn-secondary">Explore More</a>
           </div>
-          <div class="card-content">
-            <p class="card-meta">Saturday, June 21, 2026 • 2:00 PM</p>
-            <h3 class="card-title">Abstract Painting Workshop</h3>
-            <p class="card-description">Explore color mixing and composition techniques in this hands-on workshop. All skill levels welcome.</p>
-            <a href="events.html" class="btn">Register</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Featured Artists Section -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Featured Artists</h2>
-        <p class="section-subtitle">Discover the talented creators shaping Bay Area contemporary art</p>
-      </div>
-      
-      <div class="artist-grid">
-        <article class="artist-card">
-          <div class="artist-image">
-            <img src="images/artist-portrait-1.jpg" alt="Adama Toure">
-          </div>
-          <h3 class="artist-name">Adama Toure</h3>
-          <p class="artist-bio">Abstract expressionist exploring the relationship between color and emotion</p>
-          <a href="artists.html" class="btn">View Profile</a>
-        </article>
-
-        <article class="artist-card">
-          <div class="artist-image">
-            <img src="images/artist-portrait-2.jpg" alt="Adama Toure">
-          </div>
-          <h3 class="artist-name">Adama Toure</h3>
-          <p class="artist-bio">Mixed media artist examining urban landscapes and cultural identity</p>
-          <a href="artists.html" class="btn">View Profile</a>
-        </article>
-
-        <article class="artist-card">
-          <div class="artist-image">
-            <img src="images/artist-portrait-3.jpg" alt="Adama Toure">
-          </div>
-          <h3 class="artist-name">Adama Toure</h3>
-          <p class="artist-bio">Sculptor creating installations that challenge spatial perception</p>
-          <a href="artists.html" class="btn">View Profile</a>
-        </article>
-
-        <article class="artist-card">
-          <div class="artist-image">
-            <img src="images/artist-portrait-4.jpg" alt="Adama Toure">
-          </div>
-          <h3 class="artist-name">Adama Toure</h3>
-          <p class="artist-bio">Photographer documenting the evolving Oakland art community</p>
-          <a href="artists.html" class="btn">View Profile</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Orchard Galleries Section -->
-  <section class="section section-dark">
-    <div class="container narrow-container">
-      <div class="section-header">
-        <h2 class="section-title">About Orchard Galleries</h2>
-      </div>
-      <p>Located in the heart of Oakland's vibrant Art Murmur District, Orchard Galleries is a contemporary art space dedicated to fostering community engagement while highlighting the extraordinary diversity and creativity of Bay Area artists.</p>
-      <p>Our 12 exhibition showrooms host rotating exhibitions, installations, artist showcases, community events, open studios, and cultural programming that bring together artists, collectors, and art enthusiasts in a welcoming, inspiring environment.</p>
-      <p>We believe art has the power to transform communities, spark conversations, and build bridges between cultures. Through our carefully curated exhibitions and inclusive programming, we strive to make contemporary art accessible and engaging for everyone.</p>
-      <a href="about.html" class="btn btn-light mt-medium">Learn More About Us</a>
-    </div>
-  </section>
-
-  <!-- Newsletter Section -->
-  <section class="section newsletter">
-    <div class="container narrow-container">
-      <h2>Stay Connected</h2>
-      <p>Subscribe to our newsletter for exhibition announcements, event invitations, and artist spotlights delivered to your inbox.</p>
-      <form class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" required aria-label="Email address">
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Orchard Galleries</h4>
-        <p>489 25th Street<br>Oakland, CA 94612</p>
-        <p>Saturday 1 PM – 5 PM<br>Private viewings by appointment</p>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="exhibitions.html">Current Exhibitions</a></li>
-          <li><a href="artists.html">Our Artists</a></li>
-          <li><a href="events.html">Upcoming Events</a></li>
-          <li><a href="visit.html">Plan Your Visit</a></li>
-          <li><a href="contact.html">Get in Touch</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Connect</h4>
-        <p>info@orchardgalleries.com<br>(510) 555-ARTS</p>
-        <div class="social-links">
-          <a href="#" aria-label="Instagram">IG</a>
-          <a href="#" aria-label="Facebook">FB</a>
-          <a href="#" aria-label="Twitter">TW</a>
         </div>
       </div>
+    </section>
+
+    <section class="section section-raised" id="cards">
+      <div class="container">
+        <div class="section-header text-center reveal-on-scroll">
+          <p class="eyebrow">Get Involved</p>
+          <h2>Events, Exhibitions &amp; Community</h2>
+          <p class="section-intro">Discover what's happening at Orchard Galleries and how to join our creative community.</p>
+        </div>
+
+        <div class="grid-3 reveal-on-scroll">
+          <article class="card tilt-card">
+            <div class="card-icon">01</div>
+            <h3>Events</h3>
+            <p>Opening receptions, artist talks, and community gatherings throughout the season. Join us for the opening of The Dome Today on July 11th, 1 – 5 pm.</p>
+            <p class="card-meta">Next: Opening Reception · July 11th</p>
+            <a href="details.html#events" class="btn btn-secondary" style="margin-top: 1.25rem;">See Events</a>
+          </article>
+
+          <article class="card tilt-card">
+            <div class="card-icon">02</div>
+            <h3>Exhibitions</h3>
+            <p>Rotating group and solo shows featuring Bay Area artists. Now on view: The Dome Today, celebrating the legacy of The Dome Center for the Arts.</p>
+            <p class="card-meta">On View: July 11 – Aug 29</p>
+            <a href="details.html#exhibitions" class="btn btn-secondary" style="margin-top: 1.25rem;">See Exhibitions</a>
+          </article>
+
+          <article class="card tilt-card">
+            <div class="card-icon">03</div>
+            <h3>Join the Community</h3>
+            <p>Connect with artists, collectors, and neighbors in Oakland's Art Murmur District. Follow us on Instagram or reach out by email to stay in the loop.</p>
+            <p class="card-meta"><a href="https://www.instagram.com/the_orchard_galleries_on_25/" target="_blank" rel="noopener noreferrer">@the_orchard_galleries_on_25</a></p>
+            <a href="mailto:hello@orchardgalleries.com" class="btn btn-secondary" style="margin-top: 1.25rem;">Get in Touch</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-marquee-section" aria-label="Gallery preview">
+      <div class="image-marquee">
+        <div class="image-marquee-track" id="marquee-track"></div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid reveal-on-scroll">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Orchard Galleries</h2>
+            <p class="lead" style="margin-top: 1rem;">A home for contemporary art and community in Oakland's Art Murmur District.</p>
+          </div>
+          <div>
+            <p>Located in the heart of Oakland's Art Murmur District, Orchard Galleries is a contemporary art space dedicated to fostering community engagement while highlighting the extraordinary diversity and creativity of Bay Area artists.</p>
+            <p style="margin-top: 1rem;">Our exhibition showrooms host rotating exhibitions, installations, artist showcases, community events, open studios, and cultural programming that bring together artists, collectors, and art enthusiasts in a welcoming, inspiring environment.</p>
+            <div class="info-bar">
+              <p><strong>Hours:</strong> Saturday 1 PM – 5 PM</p>
+              <p><strong>Address:</strong> 489 25th St. Oakland</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-raised" id="visit">
+      <div class="container max-w-4xl text-center reveal-on-scroll">
+        <p class="eyebrow">Visit &amp; Connect</p>
+        <h2>Plan Your Visit</h2>
+        <p class="lead" style="margin: 1rem auto 2rem;">Private viewings available by appointment.</p>
+        <div class="info-bar" style="justify-content: center; margin-top: 0;">
+          <p><strong>Web:</strong> <a href="https://www.orchardgalleries.com">www.orchardgalleries.com</a></p>
+          <p><strong>Email:</strong> <a href="mailto:hello@orchardgalleries.com">hello@orchardgalleries.com</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/the_orchard_galleries_on_25/" target="_blank" rel="noopener noreferrer">@the_orchard_galleries_on_25</a></p>
+        </div>
+        <div class="btn-group" style="margin-top: 2rem;">
+          <a href="details.html" class="btn btn-primary">Full Programme Details</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">Orchard Galleries</p>
+        <p>489 25th St. Oakland</p>
+        <p style="margin-top: 0.5rem;">Saturday 1 PM – 5 PM</p>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom: 0.75rem;">Connect</p>
+        <p><a href="mailto:hello@orchardgalleries.com">hello@orchardgalleries.com</a></p>
+        <p><a href="https://www.orchardgalleries.com">www.orchardgalleries.com</a></p>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom: 0.75rem;">Follow</p>
+        <p><a href="https://www.instagram.com/the_orchard_galleries_on_25/" target="_blank" rel="noopener noreferrer">@the_orchard_galleries_on_25</a></p>
+      </div>
     </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 Orchard Galleries. All rights reserved. | Oakland Art Murmur District</p>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Orchard Galleries · Oakland Art Murmur District</p>
     </div>
   </footer>
 
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
-  <script src="js/gallery.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/orchard.js"></script>
 </body>
 </html>

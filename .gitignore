@@ -28,3 +28,9 @@ yarn-error.log*
 # Build Output (for future use)
 dist/
 build/
+
+# Local reference and archived files
+Archive/
+AdamaWebsiteStyle.md
+css/dome-today.css
+js/dome-today.js
