@@ -168,69 +168,82 @@ function buildMarquee(images) {
   `).join('');
 }
 
-function renderHeroFlipCards() {
-  const grid = document.getElementById('hero-flip-grid');
+function renderHeroArtworkCards() {
+  const grid = document.getElementById('hero-artwork-grid');
   const ex = orchardData?.currentExhibition;
   if (!grid || !ex?.artworks?.length) return;
 
   grid.innerHTML = ex.artworks.map((work, i) => `
-    <article class="showcase-card showcase-card--flip" tabindex="0" aria-label="${work.title} by ${work.artist}. Click for details.">
-      <div class="showcase-card-flipper">
-        <div class="showcase-card-face showcase-card-front">
-          <img src="${work.src}" alt="${work.alt}" loading="${i < 2 ? 'eager' : 'lazy'}">
-          <div class="showcase-card-front-overlay"></div>
-          <span class="showcase-card-front-caption">Tap for details</span>
-        </div>
-        <div class="showcase-card-face showcase-card-back">
-          <p class="eyebrow">${work.artist}</p>
-          <h3>${work.title}</h3>
-          <p class="showcase-medium">${work.medium}</p>
-          <p>${work.description}</p>
-          <div class="showcase-show-block">
-            <strong>${ex.title} · ${ex.dates}</strong>
-            <span>${work.showNote}</span>
-          </div>
-          <button type="button" class="showcase-flip-close" aria-label="Close details">Close</button>
-        </div>
-      </div>
-    </article>
+    <button type="button" class="showcase-card" data-artwork-index="${i}" aria-label="${work.title} by ${work.artist}. Click to enlarge.">
+      <img src="${work.src}" alt="${work.alt}" loading="${i < 2 ? 'eager' : 'lazy'}">
+      <div class="showcase-card-overlay"></div>
+      <span class="showcase-card-caption">View larger</span>
+    </button>
   `).join('');
 }
 
-function initFlipCards() {
-  const cards = document.querySelectorAll('.showcase-card--flip');
-  if (!cards.length) return;
+function initArtworkDetail() {
+  const grid = document.getElementById('hero-artwork-grid');
+  const panel = document.getElementById('hero-artwork-detail');
+  const closeBtn = document.getElementById('hero-artwork-detail-close');
+  const ex = orchardData?.currentExhibition;
+  if (!grid || !panel || !ex?.artworks?.length) return;
+
+  const img = document.getElementById('hero-artwork-detail-img');
+  const artist = document.getElementById('hero-artwork-detail-artist');
+  const title = document.getElementById('hero-artwork-detail-title');
+  const medium = document.getElementById('hero-artwork-detail-medium');
+  const desc = document.getElementById('hero-artwork-detail-desc');
+  const show = document.getElementById('hero-artwork-detail-show');
+  const cards = grid.querySelectorAll('.showcase-card');
+  let activeIndex = null;
+
+  function closeDetail() {
+    activeIndex = null;
+    panel.hidden = true;
+    cards.forEach((c) => c.classList.remove('is-active'));
+  }
+
+  function openDetail(index) {
+    const work = ex.artworks[index];
+    if (!work) return;
+
+    if (activeIndex === index) {
+      closeDetail();
+      return;
+    }
+
+    activeIndex = index;
+    img.src = work.src;
+    img.alt = work.alt;
+    artist.textContent = work.artist;
+    title.textContent = work.title;
+    medium.textContent = work.medium;
+    desc.textContent = work.description;
+    show.textContent = `${ex.title} · ${ex.dates}. ${work.showNote}`;
+
+    cards.forEach((c, i) => c.classList.toggle('is-active', i === index));
+    panel.hidden = false;
+
+    if (!prefersReducedMotion()) {
+      panel.style.animation = 'none';
+      panel.offsetHeight;
+      panel.style.animation = '';
+    }
+
+    panel.scrollIntoView({ behavior: prefersReducedMotion() ? 'auto' : 'smooth', block: 'nearest' });
+  }
 
   cards.forEach((card) => {
-    card.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (e.target.closest('.showcase-flip-close')) {
-        card.classList.remove('is-flipped');
-        return;
-      }
-
-      const wasFlipped = card.classList.contains('is-flipped');
-      cards.forEach((c) => c.classList.remove('is-flipped'));
-      if (!wasFlipped) card.classList.add('is-flipped');
-    });
-
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const wasFlipped = card.classList.contains('is-flipped');
-        cards.forEach((c) => c.classList.remove('is-flipped'));
-        if (!wasFlipped) card.classList.add('is-flipped');
-      }
-      if (e.key === 'Escape') {
-        card.classList.remove('is-flipped');
-      }
+    card.addEventListener('click', () => {
+      openDetail(Number(card.dataset.artworkIndex));
     });
   });
 
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.showcase-card--flip')) {
-      cards.forEach((c) => c.classList.remove('is-flipped'));
-    }
+  closeBtn?.addEventListener('click', closeDetail);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) closeDetail();
   });
 }
 
@@ -272,8 +285,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpotlight();
   initParticles();
   initDetailsPage();
-  renderHeroFlipCards();
-  initFlipCards();
+  renderHeroArtworkCards();
+  initArtworkDetail();
 
   if (typeof orchardData !== 'undefined' && orchardData.currentExhibition?.openingDate) {
     initCountdown(orchardData.currentExhibition.openingDate);

@@ -37,8 +37,21 @@
       <div class="container hero-layout reveal-stagger">
         <div class="hero-showcase reveal-item">
           <p class="hero-showcase-label eyebrow">Now Showing</p>
-          <div class="hero-flip-grid" id="hero-flip-grid" aria-label="Exhibition artwork cards"></div>
-          <p class="hero-showcase-hint">Click a card to view artwork and artist details</p>
+          <div class="hero-artwork-grid" id="hero-artwork-grid" aria-label="Exhibition artwork cards"></div>
+          <div class="hero-artwork-detail" id="hero-artwork-detail" hidden>
+            <div class="hero-artwork-detail-image-wrap">
+              <img id="hero-artwork-detail-img" src="" alt="">
+            </div>
+            <div class="hero-artwork-detail-body">
+              <p class="eyebrow" id="hero-artwork-detail-artist"></p>
+              <h3 id="hero-artwork-detail-title"></h3>
+              <p class="hero-artwork-detail-medium" id="hero-artwork-detail-medium"></p>
+              <p id="hero-artwork-detail-desc"></p>
+              <p class="hero-artwork-detail-show" id="hero-artwork-detail-show"></p>
+              <button type="button" class="hero-artwork-detail-close" id="hero-artwork-detail-close" aria-label="Close artwork details">Close</button>
+            </div>
+          </div>
+          <p class="hero-showcase-hint">Click an artwork to view it larger with details</p>
         </div>
 
         <div class="hero-content reveal-item">
