@@ -26,7 +26,7 @@ const orchardData = {
     location: '489 25th St. Oakland',
     description: 'The Orchard Galleries are pleased to present a group exhibition celebrating the legacy of The Dome Center for the Arts as well as the current artists have been part of its creative community.',
     artists: [
-      'Laura Van Duren', 'J.P. Long', 'Jo Gillerman', 'Maya Kabat',
+      'Laura Van Duren', 'JP Long', 'Jo Gillerman', 'Maya Kabat',
       'Joe Slusky', 'Clay Jensen', 'Joseph Melamed', 'Kyle Reicher',
       'Megan Mirro', 'Sophia Pousson', 'Bella Feldman', 'Leah Virsik'
     ],
@@ -35,16 +35,16 @@ const orchardData = {
         src: 'DomeToday/Picture1.jpg',
         alt: 'Sculpture with black, red, blue, and yellow forms',
         title: 'Ascending Form',
-        artist: 'Bella Feldman',
-        medium: 'Painted metal sculpture',
-        description: 'A vertical sculpture of intersecting blade-like forms in matte black, accented with vivid red, blue, and yellow on inner surfaces.',
+        artist: 'JP Long',
+        medium: 'Steel sculpture',
+        description: 'A vertical steel sculpture of intersecting blade-like forms in matte black, accented with vivid red, blue, and yellow on inner surfaces.',
         showNote: 'Part of The Dome Today, celebrating artists connected to The Dome Center for the Arts.'
       },
       {
         src: 'DomeToday/Picture4.jpg',
         alt: 'Abstract volcanic landscape composition',
         title: 'Terrain Mirror',
-        artist: 'Joe Slusky',
+        artist: 'Jo Gillerman',
         medium: 'Mixed media on panel',
         description: 'A symmetrical composition evoking volcanic terrain, with glowing orange fissures set against dark smoke and mirrored geological forms.',
         showNote: 'Part of The Dome Today, celebrating artists connected to The Dome Center for the Arts.'
@@ -62,7 +62,7 @@ const orchardData = {
         src: 'DomeToday/Picture2.png',
         alt: 'White geometric bird sculpture in flight',
         title: 'Flight Study',
-        artist: 'Clay Jensen',
+        artist: 'Joseph Melamed',
         medium: 'Mixed media sculpture',
         description: 'A geometric bird in mid-flight, built from folded white planes with black markings and a red accent at the head, suspended on a slender rod.',
         showNote: 'Part of The Dome Today, celebrating artists connected to The Dome Center for the Arts.'
@@ -83,7 +83,7 @@ const orchardData = {
         title: 'The Dome Today',
         dates: 'July 11 – Aug 29',
         description: 'A group exhibition celebrating the legacy of The Dome Center for the Arts and the artists who have been part of its creative community.',
-        artists: 'Laura Van Duren, J.P. Long, Jo Gillerman, Maya Kabat, Joe Slusky, Clay Jensen, Joseph Melamed, Kyle Reicher, Megan Mirro, Sophia Pousson, Bella Feldman, and Leah Virsik',
+        artists: 'Laura Van Duren, JP Long, Jo Gillerman, Maya Kabat, Joe Slusky, Clay Jensen, Joseph Melamed, Kyle Reicher, Megan Mirro, Sophia Pousson, Bella Feldman, and Leah Virsik',
         highlight: true
       }
     ],
