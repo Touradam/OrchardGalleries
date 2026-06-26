@@ -15,6 +15,21 @@ const orchardData = {
     ]
   },
 
+  marqueeImages: [
+    { src: 'images/artwork-1.jpg', alt: 'Artwork at Orchard Galleries', description: 'Contemporary artwork from our Bay Area artists on view at Orchard Galleries.' },
+    { src: 'images/artwork-2.jpg', alt: 'Artwork at Orchard Galleries', description: 'A work from our rotating exhibition program in Oakland\'s Art Murmur District.' },
+    { src: 'images/artwork-3.jpg', alt: 'Artwork at Orchard Galleries', description: 'Sculpture and mixed media from artists showing at the gallery.' },
+    { src: 'images/artwork-4.jpg', alt: 'Artwork at Orchard Galleries', description: 'Painting and works on paper from our current season of exhibitions.' },
+    { src: 'images/artwork-5.jpg', alt: 'Artwork at Orchard Galleries', description: 'Installation and studio work featured in our showrooms.' },
+    { src: 'images/artwork-6.jpg', alt: 'Artwork at Orchard Galleries', description: 'Contemporary art from the Orchard Galleries community of makers.' },
+    { src: 'images/artwork-7.jpg', alt: 'Artwork at Orchard Galleries', description: 'Work on view alongside group and solo exhibitions throughout the year.' },
+    { src: 'images/artwork-8.jpg', alt: 'Artwork at Orchard Galleries', description: 'Art from Bay Area creators presented at 489 25th St.' },
+    { src: 'images/gallery-space.jpg', alt: 'Orchard Galleries interior', description: 'The gallery floor at Orchard Galleries, open for exhibitions and community events.' },
+    { src: 'images/gallery-interior-1.jpg', alt: 'Gallery showroom', description: 'One of our exhibition showrooms, ready for visitors to explore.' },
+    { src: 'images/exhibition-featured.jpg', alt: 'Featured exhibition', description: 'A featured work from a recent Orchard Galleries exhibition.' },
+    { src: 'images/gallery-showroom.jpg', alt: 'Exhibition space', description: 'Our showroom space hosting rotating contemporary art exhibitions.' }
+  ],
+
   currentExhibition: {
     title: 'The Dome Today',
     type: 'Group Exhibition',

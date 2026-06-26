@@ -162,10 +162,64 @@ function buildMarquee(images) {
 
   const items = [...images, ...images, ...images, ...images];
   track.innerHTML = items.map((img) => `
-    <div class="image-marquee-item">
-      <img src="${img.src}" alt="${img.alt}" loading="lazy">
-    </div>
+    <button type="button" class="image-marquee-item" data-marquee-src="${img.src}" aria-label="View ${img.alt} full screen">
+      <img src="${img.src}" alt="${img.alt}" loading="lazy" draggable="false">
+    </button>
   `).join('');
+}
+
+function initMarqueeLightbox() {
+  const lightbox = document.getElementById('marquee-lightbox');
+  const closeBtn = document.getElementById('marquee-lightbox-close');
+  const lightboxImg = document.getElementById('marquee-lightbox-img');
+  const desc = document.getElementById('marquee-lightbox-desc');
+  const invite = document.getElementById('marquee-lightbox-invite');
+  const track = document.getElementById('marquee-track');
+  const images = orchardData?.marqueeImages;
+  if (!lightbox || !images?.length) return;
+
+  const imageMap = new Map(images.map((img) => [img.src, img]));
+  const ex = orchardData?.currentExhibition;
+  const inviteText = ex
+    ? `Come see it in person at Orchard Galleries · ${ex.location} · Now showing: ${ex.title}, ${ex.dates}`
+    : 'Come see it in person at Orchard Galleries · 489 25th St. Oakland';
+
+  if (invite) invite.textContent = inviteText;
+
+  function openLightbox(src) {
+    const item = imageMap.get(src);
+    if (!item) return;
+
+    lightboxImg.src = item.src;
+    lightboxImg.alt = item.alt;
+    desc.textContent = item.description || item.alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    if (track) track.style.animationPlayState = 'paused';
+    closeBtn?.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    if (track) track.style.animationPlayState = '';
+  }
+
+  document.getElementById('marquee-track')?.addEventListener('click', (e) => {
+    const item = e.target.closest('.image-marquee-item');
+    if (!item) return;
+    openLightbox(item.dataset.marqueeSrc);
+  });
+
+  closeBtn?.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
 }
 
 function renderHeroArtworkCards() {
@@ -292,7 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown(orchardData.currentExhibition.openingDate);
   }
 
-  if (typeof orchardData !== 'undefined' && orchardData.currentExhibition?.artworks) {
-    buildMarquee(orchardData.currentExhibition.artworks.map(({ src, alt }) => ({ src, alt })));
+  if (typeof orchardData !== 'undefined' && orchardData.marqueeImages?.length) {
+    buildMarquee(orchardData.marqueeImages);
+    initMarqueeLightbox();
   }
 });
