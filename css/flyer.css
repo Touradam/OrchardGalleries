@@ -1,0 +1,209 @@
+/* The Dome Today — Print Flyer */
+
+:root {
+  --flyer-bg: #FAF9F6;
+  --flyer-text: #2C2C2C;
+  --flyer-muted: #9B9B9B;
+  --flyer-accent: #8B7355;
+  --flyer-gap: #E8E6E1;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+@page {
+  size: letter portrait;
+  margin: 0;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #E8E6E3;
+  color: var(--flyer-text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.flyer-page {
+  width: 8.5in;
+  height: 11in;
+  padding: 0.7in 0.85in 0.65in;
+  background: var(--flyer-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.28in;
+}
+
+.flyer-header {
+  flex-shrink: 0;
+}
+
+.flyer-title {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--flyer-text);
+  margin-bottom: 0.35rem;
+}
+
+.flyer-body {
+  font-size: 11pt;
+  line-height: 1.55;
+  color: var(--flyer-text);
+  max-width: 100%;
+}
+
+.flyer-artists {
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--flyer-text);
+  margin-top: 0.35rem;
+}
+
+.flyer-artwork-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.45rem 0.55rem;
+  min-height: 0;
+}
+
+.flyer-artwork {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.flyer-artwork-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding: 0.18rem 0.22rem;
+  background: #FFFFFF;
+  border: 1px solid var(--flyer-gap);
+}
+
+.flyer-artwork img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.flyer-artwork-caption {
+  flex-shrink: 0;
+  padding: 0.22rem 0.08rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+}
+
+.flyer-artwork-title {
+  font-family: var(--font-serif);
+  font-size: 9pt;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--flyer-text);
+}
+
+.flyer-artwork-meta {
+  font-size: 8pt;
+  line-height: 1.35;
+  color: var(--flyer-muted);
+}
+
+.flyer-details {
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-top: 0.12in;
+  border-top: 1px solid var(--flyer-gap);
+}
+
+.flyer-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.flyer-detail-label {
+  font-size: 8.5pt;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--flyer-accent);
+}
+
+.flyer-detail-value {
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--flyer-text);
+}
+
+.flyer-footer {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.08in;
+  border-top: 1px solid var(--flyer-gap);
+}
+
+.flyer-footer-text {
+  font-size: 9.5pt;
+  color: var(--flyer-muted);
+  letter-spacing: 0.02em;
+}
+
+.flyer-qr {
+  flex-shrink: 0;
+}
+
+.flyer-qr img {
+  display: block;
+  width: 0.72in;
+  height: 0.72in;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    display: block;
+  }
+
+  .flyer-page {
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+@media screen {
+  .flyer-page {
+    box-shadow: 0 4px 24px rgba(44, 44, 44, 0.12);
+  }
+}

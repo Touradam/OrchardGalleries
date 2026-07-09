@@ -1,0 +1,11 @@
+{
+  "name": "orchard-galleries",
+  "private": true,
+  "scripts": {
+    "flyer:pdf": "node scripts/generate-flyer-pdf.js"
+  },
+  "devDependencies": {
+    "puppeteer": "^24.0.0",
+    "qrcode": "^1.5.4"
+  }
+}

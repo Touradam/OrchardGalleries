@@ -86,13 +86,7 @@ const orchardData = {
   },
 
   exhibitions: {
-    past: [
-      {
-        title: 'Winter Open Studios',
-        dates: 'Jan 18 – Feb 22, 2026',
-        description: 'An open studio weekend showcasing work across Orchard Galleries\' resident artists and invited guests.'
-      }
-    ],
+    past: [],
     current: [
       {
         title: 'The Dome Today',
@@ -102,23 +96,11 @@ const orchardData = {
         highlight: true
       }
     ],
-    future: [
-      {
-        title: 'Autumn Collective',
-        dates: 'Sep 12 – Nov 1, 2026',
-        description: 'A seasonal group show featuring emerging Bay Area artists working across painting, sculpture, and installation.'
-      }
-    ]
+    future: []
   },
 
   events: {
-    past: [
-      {
-        title: 'Gallery Talk: Bay Area Abstraction',
-        dates: 'May 3, 2026 · 2 pm',
-        description: 'An afternoon conversation with three painters on color, material, and the Oakland studio scene.'
-      }
-    ],
+    past: [],
     current: [
       {
         title: 'Opening Reception — The Dome Today',
@@ -127,17 +109,6 @@ const orchardData = {
         highlight: true
       }
     ],
-    future: [
-      {
-        title: 'Artist Panel: The Dome Legacy',
-        dates: 'Aug 9, 2026 · 3 pm',
-        description: 'Former Dome Center artists and curators reflect on the space\'s history and its influence on Oakland\'s creative community.'
-      },
-      {
-        title: 'Community Open House',
-        dates: 'Aug 23, 2026 · 1 – 5 pm',
-        description: 'A free afternoon for neighbors, collectors, and art lovers to tour the galleries and meet the Orchard team.'
-      }
-    ]
+    future: []
   }
 };
